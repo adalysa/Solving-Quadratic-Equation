@@ -1,0 +1,35 @@
+import sys
+import cmath
+
+print("The quadratic equation is: ax2+bx+c=0")  #formula
+
+try:
+    a=float(input("What is the numeric value of a? "))
+    if a==0:
+        print("a cannot equal 0")
+        sys.exit(1)
+    print("a is",a)
+except ValueError:
+    print("Sorry, that's not a number.")
+    sys.exit(1)
+
+try:
+    b=float(input("What is the numeric value of b? "))
+    print("b is",b)
+except ValueError:
+    print("Sorry, that's not a number.")
+    sys.exit(1)
+
+try:
+    c=float(input("What is the numeric value of c? "))
+    print("c is",c)
+except ValueError:
+    print("Sorry, that's not a number.")
+    sys.exit(1)                             #establishes variables
+
+dis=(b**2)-(4*a*c)     #get discriminant
+
+a1=(-b+cmath.sqrt(dis))/(2*a)
+a2=(-b-cmath.sqrt(dis))/(2*a)    #both formulas
+
+print("The solutions are",a1,"and",a2)  #solutions
